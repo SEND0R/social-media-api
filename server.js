@@ -6,6 +6,7 @@ import connectdb from "./config/mongoconfig.js";
 import userRouter from "./routes/api/users.js";
 import profileRouter from "./routes/api/profile.js";
 import authRouter from "./routes/api/auth.js";
+import postRouter from "./routes/api/post.js";
 
 const app = express();
 connectdb();
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use("/api/users", userRouter);
 app.use("/api/profile", profileRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/post", postRouter);
 
 // ********** listen ************************************
 
